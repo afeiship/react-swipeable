@@ -28,7 +28,7 @@ export default class extends React.Component{
 
   constructor(props){
     super(props);
-    debugger;
+    console.log(props);
     this.state = this.initialState();
   }
 
@@ -178,15 +178,13 @@ export default class extends React.Component{
   render(){
     const newProps = {
       ...this.props,
-      onTouchStart: this.eventStart,
-      onTouchMove: this.eventMove,
-      onTouchEnd: this.eventEnd,
-      onMouseDown: this.props.trackMouse && this.eventStart,
-      onMouseMove: this.props.trackMouse && this.eventMove,
-      onMouseUp: this.props.trackMouse && this.eventEnd
+      onTouchStart: this.eventStart.bind(this),
+      onTouchMove: this.eventMove.bind(this),
+      onTouchEnd: this.eventEnd.bind(this),
+      onMouseDown: this.props.trackMouse && this.eventStart.bind(this),
+      onMouseMove: this.props.trackMouse && this.eventMove.bind(this),
+      onMouseUp: this.props.trackMouse && this.eventEnd.bind(this)
     };
-
-    console.log(newProps);
 
     delete newProps.onSwiped
     delete newProps.onSwiping
