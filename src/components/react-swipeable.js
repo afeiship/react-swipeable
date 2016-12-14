@@ -28,7 +28,6 @@ export default class extends React.Component{
 
   constructor(props){
     super(props);
-    console.log(props);
     this.state = this.initialState();
   }
 
