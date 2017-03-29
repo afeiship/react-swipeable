@@ -1,4 +1,4 @@
-#react-swipeable
+# react-swipeable
 > Swipe events for react.
 
 
