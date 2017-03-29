@@ -10,7 +10,7 @@ var cssSourceMapDev = (env === 'development' && config.dev.cssSourceMap)
 var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap)
 var useCssSourceMap = cssSourceMapDev || cssSourceMapProd;
 var externals = process.env.NODE_ENV === 'production' ? {
-  react: 'react',
+  react: 'React',
   classnames: 'classnames',
   'react-dom': 'react-dom'
 } : {};
