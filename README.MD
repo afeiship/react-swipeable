@@ -8,7 +8,7 @@
 + https://yarnpkg.com/en/docs/install
 + https://github.com/dogfessional/react-swipeable (The copy of this project)
 
-## props:
+## properties:
 ```javascript
 onSwiped: PropTypes.func,
 onSwiping: PropTypes.func,
